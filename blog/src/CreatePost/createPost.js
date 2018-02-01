@@ -9,8 +9,13 @@ class CreatePost extends Component {
 
     constructor(props) {
         super(props);
+
         this.state = {};
     }
+
+    sentPost = () => {
+        console.log("Place for request for sent post");
+    };
 
     render() {
         return (
@@ -25,7 +30,7 @@ class CreatePost extends Component {
 
                     <FormGroup>
                         <Col smOffset={9} sm={3}>
-                            <Button type="submit">Create Post</Button>
+                            <Button type="submit" onClick={this.sentPost}>Create Post</Button>
                         </Col>
                     </FormGroup>
                 </form>
